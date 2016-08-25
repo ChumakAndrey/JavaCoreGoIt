@@ -33,28 +33,25 @@ public class Task1 {
 
     public int arraysSum(int[]array){
         int sum=0;
-        int x = 0;
-        while (x < array.length) {
-            sum += array[x];
-            x++;
+        for (int x : array) {
+            sum += x;
         }
         return sum;
     }
 
     public double arraysSum(double[]array){
         double sum=0;
-        int x = 0;
-        while (x < array.length) {
-            sum += array[x];
-            x++;
+        int i = 0;
+        while (i < array.length) {
+            sum += array[i];
+            i++;
         }
         return sum;
     }
 
     public int min(int []array) {
         int min = 0;
-        int x = 0;
-        while (x < array.length) {
+        for (int x = 0; x < array.length; x++) {
             if (min > array[x]){
                 min = array[x];
             }
@@ -65,8 +62,7 @@ public class Task1 {
 
     public double min(double []array) {
         double min = 0;
-        int x = 0;
-        while (x < array.length) {
+        for (int x = 0; x < array.length; x++) {
             if (min > array[x]){
                 min = array[x];
             }
