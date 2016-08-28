@@ -50,7 +50,7 @@ public class Task1 {
     }
 
     public int min(int []array) {
-        int min = 0;
+        int min = array[0];
         for (int x = 0; x < array.length; x++) {
             if (min > array[x]){
                 min = array[x];
@@ -72,7 +72,7 @@ public class Task1 {
     }
 
     public int max(int []array) {
-        int max = 0;
+        int max = array[0];
         int x = 0;
         while (x < array.length) {
             if (max < array[x]){
@@ -96,7 +96,7 @@ public class Task1 {
     }
 
     public int maxPositive (int []array) {
-        int maxPositive=0;
+        int maxPositive=array[0];
         int x = 0;
         while (x < array.length) {
             if(maxPositive < array[x] && array[x] >= 0){
@@ -151,11 +151,31 @@ public class Task1 {
         return modulus;
     }
 
-    public int secondLargest (int []array) {
+   /* public int secondLargest (int []array) {
         int preMax = 0;
         BubbleSort(array);
         preMax = array[array.length-2];
         return preMax;
+    }*/
+
+    public int secondLargest (int []array) {
+        boolean flag = true;
+        int temp;
+        int secondLargest;
+
+        while (flag) {
+            flag = false;
+            for (int j = 0; j < array.length - 1; j++) {
+                if (array[j] > array[j + 1]) {
+                    temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                    flag = true;
+                }
+            }
+        }
+        secondLargest = array[array.length-2];
+        return secondLargest;
     }
 
     public double secondLargest (double []array) {
