@@ -28,7 +28,7 @@ public class Withdraw {
     }
 
 
-    private int findNumberInMass(String[] owners, String ownerName) {
+    public int findNumberInMass(String[] owners, String ownerName) {
         for (int i = 0; i < owners.length; i++) {
             if (ownerName == owners[i]) {
                 return i;
