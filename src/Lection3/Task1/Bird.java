@@ -1,4 +1,4 @@
-package Lection3;
+package Lection3.Task1;
 
 
 public class Bird {

@@ -1,4 +1,4 @@
-package Lection3;
+package Lection3.Task1;
 
 /**
  * Created by Администратор on 02.09.2016.
