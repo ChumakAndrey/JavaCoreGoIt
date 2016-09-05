@@ -10,7 +10,7 @@ public class Solution {
         animal.walk();
         bird.fly();
         bird.sing();
-        System.out.println("I am Bird");
+        bird.IAmBird();
 
     }
 }
