@@ -36,6 +36,6 @@ public class USBank extends Bank {
             if (summ < 1000) {
                 return summ * 6 / 100;
             } else return summ * 8 / 100;
-        }
+        } return 0;
     }
 }
