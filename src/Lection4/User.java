@@ -4,7 +4,7 @@ package Lection4;
  * Created by Администратор on 09.09.2016.
  */
 public class User {
-    long id;
+    long id = this.hashCode();
     String name;
     double balance;
     int monthOfEmployment;
