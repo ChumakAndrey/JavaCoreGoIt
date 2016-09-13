@@ -69,9 +69,9 @@ public abstract class Bank {
     }
 
 
-    abstract int getLimitOfWithdrawal();
-    abstract int getLimitOfFunding();
-    abstract int getMonthRate();
-    abstract int getCommision(int summ);
-    double moneyPaidMonthlyForSalary(){};
+    abstract int getLimitOfWithdrawal(Currency currency);
+    abstract int getLimitOfFunding(Currency currency);
+    abstract int getMonthRate(int summ, Currency currency);
+    abstract int getCommision(int summ, Currency currency);
+    double moneyPaidMonthlyForSalary(){return 0;}
 }

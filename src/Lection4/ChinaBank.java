@@ -4,37 +4,35 @@ package Lection4;
  * Created by Администратор on 09.09.2016.
  */
 public class ChinaBank extends Bank {
-    Currency currency;
-    int summ;
 
-    public ChinaBank(Currency currency, int summ) {
-        this.currency = currency;
-        this.summ = summ;
+    @Override
+    public String toString() {
+        return "ChinaBank";
     }
 
     @Override
-    int getLimitOfWithdrawal() {
+    int getLimitOfWithdrawal(Currency currency) {
         if (currency.equals("USD"))
             return 100;
         else return 150;
     }
 
     @Override
-    int getLimitOfFunding() {
+    int getLimitOfFunding(Currency currency) {
         if (currency.equals("USD"))
             return 10000;
         else return 5000;
     }
 
     @Override
-    int getMonthRate() {
+    int getMonthRate(int summ, Currency currency) {
         if (currency.equals("USD"))
             return summ/100;
         else return 0;
     }
 
     @Override
-    int getCommision() {
+    int getCommision(int summ, Currency currency) {
         if (currency.equals("USD")) {
             if (summ < 1000) {
                 return summ * 3 / 100;
