@@ -5,6 +5,7 @@ package Lection4;
  */
 public class Main {
     public static void main(String[] args) {
+
         Bank usBank = new USBank();
         Bank euBank = new EUBank();
         Bank chinaBank = new ChinaBank();
