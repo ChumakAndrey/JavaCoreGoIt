@@ -18,9 +18,7 @@ public class Controller {
     Room[] requestRooms(int price, int persons, String city){
         Room [] DB = new Room[15]; 
         int i = 0;
-        
-        apis[1].findRooms(price, persons, city);
-        apis[3].findRooms(price, persons, city);
+
 
         for (Room room : apis[0].findRooms(price, persons, city)) {
             if (room != null) {
@@ -61,4 +59,6 @@ public class Controller {
         }
         return checked;
     }
+
+
 }

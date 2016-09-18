@@ -39,14 +39,22 @@ public class Room {
 
         Room room = (Room) obj;
 
-        if (id != room.id) return false;
+
         if (price != room.price) return false;
+        if (persons != room.persons) return false;
+        if (cityName != room.cityName) return false;
+
         return cityName.equals(room.cityName);
     }
 
     public long getId() {
 
         return id;
+    }
+
+    @Override
+    public String toString() {
+        return this.cityName + " " + this.hotelName + " " + this.persons + " " + this.price + " " + this.dateAvailableFrom + "\n";
     }
 
     public void setId(long id) {
