@@ -37,6 +37,8 @@ public class TripAdvisorApi implements API {
 
     @Override
     public Room[] getAll() {
-        return new Room[0];
+        Room[] getAll;
+        getAll = rooms;
+        return getAll;
     }
 }
