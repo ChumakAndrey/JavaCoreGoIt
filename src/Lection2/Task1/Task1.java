@@ -1,37 +1,36 @@
 package Lection2.Task1;
 
-import java.util.Arrays;
+import Lection6.ArraysUtils;
 
-import static Lection2.BubbleSort.BubbleSort;
+import java.util.Arrays;
 
 
 public class Task1 {
 
      public static void main(String[] args) {
-        Task1 t1 = new Task1();
         int [] array1 = Lection2.MakeArray.newArray(10);
-        double [] array2 = Lection2.MakeArray.newDoubleArray(10);
+        //double [] array2 = Lection2.MakeArray.newDoubleArray(10);
 
        System.out.println(Arrays.toString(array1));
-        System.out.println("Сумма равна " + t1.arraysSum(array1));
-        System.out.println("Минимальное значение равно " + t1.min(array1));
-        System.out.println("Максинмальное значение равно " + t1.max(array1));
-        System.out.println("Макс.позитивное значение равно " + t1.maxPositive(array1));
-        System.out.println("Умножение всех элементов равно " + t1.multiplication(array1));
-        System.out.println("Деление по модулю равно " + t1.modulus(array1));
-        System.out.println("Второе по величине = " + t1.secondLargest(array1));
+        System.out.println("Сумма равна " + ArraysUtils.arraysSum(array1));
+        System.out.println("Минимальное значение равно " + ArraysUtils.min(array1));
+        System.out.println("Максинмальное значение равно " + ArraysUtils.max(array1));
+        System.out.println("Макс.позитивное значение равно " + ArraysUtils.maxPositive(array1));
+        System.out.println("Умножение всех элементов равно " + ArraysUtils.multiplication(array1));
+        System.out.println("Деление по модулю равно " + ArraysUtils.modulus(array1));
+        System.out.println("Второе по величине = " + ArraysUtils.secondLargest(array1));
 
-        System.out.println(Arrays.toString(array2));
-        System.out.println("Сумма равна " + t1.arraysSum(array2));
-        System.out.println("Минимальное значение равно " + t1.min(array2));
-        System.out.println("Максинмальное значение равно " + t1.max(array2));
-        System.out.println("Макс.позитивное значение равно " + t1.maxPositive(array2));
-        System.out.println("Умножение всех элементов равно " + t1.multiplication(array2));
-        System.out.println("Деление по модулю равно " + t1.modulus(array2));
-        System.out.println("Второе по величине = " + t1.secondLargest(array2));
+        //System.out.println(Arrays.toString(array2));
+        //System.out.println("Сумма равна " + t1.arraysSum(array2));
+        //System.out.println("Минимальное значение равно " + t1.min(array2));
+        //System.out.println("Максинмальное значение равно " + t1.max(array2));
+        //System.out.println("Макс.позитивное значение равно " + t1.maxPositive(array2));
+        //System.out.println("Умножение всех элементов равно " + t1.multiplication(array2));
+        //System.out.println("Деление по модулю равно " + t1.modulus(array2));
+        //System.out.println("Второе по величине = " + t1.secondLargest(array2));
             }
 
-    public int arraysSum(int[]array){
+   /* public int arraysSum(int[]array){
         int sum=0;
         for (int x : array) {
             sum += x;
@@ -156,7 +155,7 @@ public class Task1 {
         BubbleSort(array);
         preMax = array[array.length-2];
         return preMax;
-    }*/
+    }
 
     public int secondLargest (int []array) {
         boolean flag = true;
@@ -183,5 +182,5 @@ public class Task1 {
         BubbleSort(array);
         preMax = array[array.length-2];
         return preMax;
-    }
+    }*/
 }
