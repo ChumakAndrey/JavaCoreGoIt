@@ -3,7 +3,7 @@ package Lection6;
 /**
  * Created by Администратор on 26.09.2016.
  */
-public class ArraysUtils {
+public final class ArraysUtils {
     public static final int arraysSum(int[]array){
         int sum=0;
         for (int x : array) {
