@@ -9,9 +9,7 @@ public class User {
     private int salary;
     private int balance;
 
-    {
-        id = hashCode();
-    }
+
 
     public User(String firstName, String lastName, int salary, int balance) {
 
@@ -19,6 +17,7 @@ public class User {
         this.lastName = lastName;
         this.salary = salary;
         this.balance = balance;
+        id = this.hashCode();
     }
 
     public long getId() {
@@ -71,15 +70,19 @@ public class User {
         if (salary != user.salary) return false;
         if (balance != user.balance) return false;
 
-        return balance==user.balance;
+        return ((User) obj).getSalary() == this.salary;
     }
 
     @Override
     public int hashCode() {
-        int result = (int) (salary * 95);
+        int result = (salary * 95);
         result = 31 * result + balance + firstName.length();
-        result *= lastName.hashCode();
         return result;
     }
 
+    @Override
+    public String toString() {
+
+        return this.firstName + " " + this.lastName;
+    }
 }

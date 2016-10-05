@@ -9,11 +9,9 @@ public final class UsersUtils {
         int j = 0;
         User[] uniqueUsers = new User[10];
         for (int i = 1; i <users.length; i++) {
-            for (User user : users) {
-                if( !users[i].equals(user)){
+                if( !users[i].equals(users[0])){
                         uniqueUsers[j] = users[i];
                 j++;
-                }
             }
         }
         return uniqueUsers;
@@ -24,9 +22,11 @@ public final class UsersUtils {
         User[] usersWithConditionalBalance = new User[10];
         int j = 0;
         for (int i = 0; i < users.length; i++) {
+            if(users[i]!= null){
             if(balance == users[i].getBalance()){
                 usersWithConditionalBalance[j] = users[i];
                 j++;
+            }
             }
         }
         return usersWithConditionalBalance;
@@ -35,7 +35,9 @@ public final class UsersUtils {
 
     static final User[] paySalaryToUsers(User[] users){
         for (int i = 0; i < users.length; i++) {
+            if(users[i]!= null){
             users[i].setBalance(users[i].getBalance() + users[i].getSalary());
+            }
         }
         return users;
     }
@@ -47,21 +49,32 @@ public final class UsersUtils {
         for (int i = 0; i < users.length; i++) {
             if (users[i] != null) {
                 usersId[j] = users[i].getId();
+                System.out.println(users[i].getFirstName() + "'s ID is " + users[i].getId());
+                j++;
             }
         }
         return usersId;}
 
 
     static User[] deleteEmptyUsers(User[] users){
-
         int k = 0;
+        int j = 0;
         for (int i = 0; i < users.length; i++) {
             if (users[i]!=null) {
-                users[k] = users[i];
+                k++;
             }
         }
-
-        return users;
+        User[] withoutEmptyUsers = new User[k];
+        for (int i = 0; i < users.length; i++) {
+            if (users[i]!=null) {
+                withoutEmptyUsers[j] = users[i];
+                j++;
+            }
+        }
+        return withoutEmptyUsers;
     }
+
+
+
 
 }
