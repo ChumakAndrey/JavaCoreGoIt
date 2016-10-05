@@ -67,23 +67,44 @@ public final class ArraysUtils {
         boolean flag = true;
         int temp;
         int secondLargest;
+        int[] withSecondLargest = array;
 
         while (flag) {
             flag = false;
-            for (int j = 0; j < array.length - 1; j++) {
-                if (array[j] > array[j + 1]) {
-                    temp = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = temp;
+            for (int j = 0; j < withSecondLargest.length - 1; j++) {
+                if (withSecondLargest[j] > withSecondLargest[j + 1]) {
+                    temp = withSecondLargest[j];
+                    withSecondLargest[j] = withSecondLargest[j + 1];
+                    withSecondLargest[j + 1] = temp;
                     flag = true;
                 }
             }
         }
-        secondLargest = array[array.length-2];
+        secondLargest = withSecondLargest[withSecondLargest.length-2];
         return secondLargest;
     }
 
-    static final int[] reverse(int[] array){return array;}
-    static final int[] findEvenElements(int[] array){return array;}
+    public static final int[] reverse(int[] array){
+        int[] reverse = new int[array.length];
+        int incrReverse = 0;
+        for(int i = array.length-1; i >= 0; i--){
+            reverse[incrReverse] = array [i];
+            incrReverse++;
+        }
+
+        return reverse;
+    }
+
+    public static final int[] findEvenElements(int[] array){
+        int [] findedEvenElements = new int[array.length];
+        int incr = 0;
+        for (int ifEven : array) {
+            if (ifEven % 2 == 0) {
+                findedEvenElements[incr] = ifEven;
+                incr++;
+            }
+            }
+        return findedEvenElements;
+    }
 
 }

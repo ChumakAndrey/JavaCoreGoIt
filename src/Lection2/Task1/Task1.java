@@ -19,6 +19,8 @@ public class Task1 {
         System.out.println("Умножение всех элементов равно " + ArraysUtils.multiplication(array1));
         System.out.println("Деление по модулю равно " + ArraysUtils.modulus(array1));
         System.out.println("Второе по величине = " + ArraysUtils.secondLargest(array1));
+        System.out.println("Reverse = " + Arrays.toString(ArraysUtils.reverse(array1)));
+        System.out.println("Even = " + Arrays.toString(ArraysUtils.findEvenElements(array1)));
 
         //System.out.println(Arrays.toString(array2));
         //System.out.println("Сумма равна " + t1.arraysSum(array2));
