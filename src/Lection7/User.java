@@ -10,9 +10,14 @@ public class User {
     private String city;
     private int balance;
 
-    {
+    public User(String firstName, String lastName, String city, int balance) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.city = city;
+        this.balance = balance;
         id = this.hashCode();
     }
+
 
 
     @Override
@@ -26,9 +31,9 @@ public class User {
         if (firstName != user.firstName) return false;
         if (lastName != user.lastName) return false;
         if (city != user.city) return false;
-        if (balance != user.balance) return false;
+        //if (balance != user.balance) return false;
 
-        return ((User) obj).getCity() == this.city;
+        return ((User) obj).getBalance() == this.balance;
     }
 
     @Override
@@ -42,6 +47,10 @@ public class User {
     public String toString() {
 
         return this.firstName + " " + this.lastName;
+    }
+
+    public long getId() {
+        return id;
     }
 
     public String getFirstName() {
