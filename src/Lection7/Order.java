@@ -3,11 +3,14 @@ package Lection7;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.ListIterator;
 
 /**
  * Created by Администратор on 16.10.2016.
  */
-public class Order {
+public class Order implements Comparable<Order>{
+
+
     private long id;
     private int price;
     private Currency currency;
@@ -102,17 +105,24 @@ public class Order {
         }
     }
 
+
     public static List<Order> deleteUnderPrice1500 (List <Order> order) {
         List <Order> up1500 = new LinkedList<>();
-        for (Order ord : order) {
-            if (ord.getPrice() >= 1500) up1500.add(ord);
+        ListIterator<Order> iterator = order.listIterator();
+        int iterI = order.size();
+        while (iterator.hasNext()) {
+            iterator.next();
+            if (iterator.next().getPrice()<1500){
+                iterator.remove();
+            }
+            System.out.println(iterator.next());
+
         }
-        /*ListIterator<Order> iterator = order.listIterator();
-        while(iterator.hasNext()){
-            if(iterator.n)*/
-        order = up1500;
         return order;
         }
+
+
+
 
     public static void separateCurrency (List <Order> order) {
         List<Order> USD = new LinkedList<>();
@@ -127,5 +137,11 @@ public class Order {
     }
 
 
+    @Override
+    public int compareTo(Order o) {
+        return price - o.getPrice();
     }
+
+
+}
 

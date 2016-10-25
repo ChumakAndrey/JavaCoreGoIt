@@ -1,19 +1,18 @@
 package Lection7;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by Администратор on 16.10.2016.
  */
 public class Main {
+
+
     public static void main(String[] args) {
         List <User> usersList = new ArrayList<>();
         usersList.add(new User("Will", "Smith", "New York", 5000));
         usersList.add(new User("Ann", "Wou", "Vegas", 4000));
-        usersList.add(new User("Andrew", "Chumak", "Kharkiv", 1000));
+        usersList.add(new User("Andrew", "Petrov", "Kharkiv", 1000));
         usersList.add(new User("Nikita", "Yonk", "Budapesht", 4500));
         usersList.add(new User("Veronika", "Stravinsky", "Lviv", 8000));
         usersList.add(new User("Kate", "White", "Penza", 300));
@@ -66,7 +65,10 @@ public class Main {
             }
         };
 
-        ordersList.sort(sortByPriceIncrease);
+
+
+
+        /*ordersList.sort(sortByPriceIncrease);
         System.out.println(ordersList);
 
         ordersList.sort(sortByPriceDecrease);
@@ -76,12 +78,24 @@ public class Main {
         System.out.println(ordersList);
 
         Order.deleteDuplicates(ordersList);
-        System.out.println(ordersList);
+        System.out.println(ordersList);*/
 
         Order.deleteUnderPrice1500(ordersList);
         System.out.println(ordersList);
 
-        Order.separateCurrency(ordersList);
+        //Order.separateCurrency(ordersList);
+
+        Set<Order> ordersSet = new TreeSet<>();
+        ordersSet.addAll(ordersList);
+
+
+        for (Order ord : ordersSet) {
+            if (ord.getUser().getLastName() == "Petrov") {
+                System.out.println(ord);
+            }
+        }
+
+
 
     }
 }
