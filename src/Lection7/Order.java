@@ -116,7 +116,7 @@ public class Order implements Comparable<Order>{
                 iterator.remove();
             }
             System.out.println(iterator.next());
-
+            //list1.removeIf(x -> (x.getPrice() < 1500));
         }
         return order;
         }
