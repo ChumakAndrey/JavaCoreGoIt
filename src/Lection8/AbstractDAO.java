@@ -13,5 +13,4 @@ public interface AbstractDAO <T>{
     void saveAll(List<T> tList);
     List<T> getList(List<T> tList);
 
-
 }
