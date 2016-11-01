@@ -27,14 +27,11 @@ public class CompareArrayAndLinked {
         }
 
     long finishString = System.currentTimeMillis();
-
         firstCompare = finishString - startString;
 
         startString = System.currentTimeMillis();
 
-        for (int i = 0; i < 1000; i++) {
-            stringLinkedList.add("AbraCadabra");
-        }
+        for (int i = 0; i < 1000; i++) stringLinkedList.add("AbraCadabra");
 
         finishString = System.currentTimeMillis();
         secondCompare = finishString - startString;
