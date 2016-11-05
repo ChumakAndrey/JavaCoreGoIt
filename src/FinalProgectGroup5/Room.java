@@ -6,6 +6,7 @@ import java.util.Random;
  * Created by Администратор on 30.10.2016.
  */
 public class Room {
+    private int roomNumber;
     private boolean isEmpty;
     private int persons;
     private int price;
@@ -13,11 +14,14 @@ public class Room {
     private String hotelName;
     private String cityName;
 
-    public Room(int persons, int price) {
+    public Room(int persons, int price, int roomNumber, String hotelName, String cityName) {
         this.persons = persons;
         this.price = price;
         isEmpty = true;
         id = this.hashCode();
+        this.roomNumber = roomNumber;
+        this.hotelName = hotelName;
+        this.cityName = cityName;
         isEmpty = true;
     }
 
