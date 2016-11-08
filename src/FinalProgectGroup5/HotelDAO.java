@@ -10,9 +10,7 @@ public class HotelDAO {
     public Set<Hotel> getRooms(String city, String hotelName, int price, int persons){
         Set<Hotel> resultHotelList = new HashSet<>();
 
-
-
-
+        return  resultHotelList;
 
     }
 }
