@@ -1,4 +1,4 @@
-package Lection9.Lection7;
+package Lection9;
 
 /**
  * Created by Администратор on 16.10.2016.
