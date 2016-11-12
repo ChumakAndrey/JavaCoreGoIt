@@ -1,8 +1,6 @@
 package Lection10;
 
 
-import static Lection10.WithFAndGMethods.g;
-
 /**
  * Created by Администратор on 12.11.2016.
  */
@@ -36,7 +34,16 @@ public class Main {
         }*/
 ///////////////////////////////////////////////////
         //Task #4
-        g();
+        /*g();*/
+
+////////////////////////////////////////////////////
+
+        //Task #5
+        try {
+            MethodsWithExceptions.withAllExceptions();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
 
     }

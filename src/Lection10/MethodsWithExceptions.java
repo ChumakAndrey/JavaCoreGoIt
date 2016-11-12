@@ -8,4 +8,8 @@ public class MethodsWithExceptions {
         System.out.println("In withEx method");
         throw new MyException("MyException thrown");
     }
+
+    public static void withAllExceptions() throws MyException, MyException1, MyException2 {
+        System.out.println("In withAllExceptions()");
+    }
 }
