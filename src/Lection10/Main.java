@@ -1,13 +1,15 @@
 package Lection10;
 
 
+import static Lection10.WithFAndGMethods.g;
+
 /**
  * Created by Администратор on 12.11.2016.
  */
 public class Main {
     public static void main(String[] args) {
         //Task #1
-        /*try{
+       /* try{
             System.out.println("In try block");
             throw new Exception();
         }
@@ -16,7 +18,7 @@ public class Main {
         }*/
 ////////////////////////////////////////////////////
         //Task #2
-        /*try {
+       /* try {
             MethodsWithExceptions.withEx();
         }
         catch (MyException ex) {
@@ -24,17 +26,17 @@ public class Main {
         }*/
 ////////////////////////////////////////////////////
         //Task #3
-        try{
+        /*try{
             String string = null;
             System.out.println(string.length());
         }
         catch (NullPointerException np){
             System.out.println("Catched");
             np.printStackTrace(System.err);
-        }
+        }*/
 ///////////////////////////////////////////////////
         //Task #4
-
+        g();
 
 
     }
