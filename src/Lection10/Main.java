@@ -12,7 +12,7 @@ public class Main {
         }
         catch (Exception ex) {
 
-            System.err.println("In cath block");
+            System.err.println("In catch block");
         }
     }
 }
