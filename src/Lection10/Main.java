@@ -6,19 +6,36 @@ package Lection10;
  */
 public class Main {
     public static void main(String[] args) {
-        try{
+        //Task #1
+        /*try{
             System.out.println("In try block");
             throw new Exception();
         }
         catch (Exception ex) {
             System.err.println("In catch block");
-        }
-
-        try {
+        }*/
+////////////////////////////////////////////////////
+        //Task #2
+        /*try {
             MethodsWithExceptions.withEx();
         }
         catch (MyException ex) {
             ex.printStackTrace(System.err);
+        }*/
+////////////////////////////////////////////////////
+        //Task #3
+        try{
+            String string = null;
+            System.out.println(string.length());
         }
+        catch (NullPointerException np){
+            System.out.println("Catched");
+            np.printStackTrace(System.err);
+        }
+///////////////////////////////////////////////////
+        //Task #4
+
+
+
     }
 }
